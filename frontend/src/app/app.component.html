@@ -1,0 +1,72 @@
+<h1>Product Catalog</h1>
+<div>
+    <a class="btn-accent" routerLink="/create">Add New Product</a>
+  </div>
+  
+  <div class="form-group">
+    <label for="search">Search by Name</label>
+    <input id="search" class="form-input" (keyup)="applyNameFilter($event)" placeholder="Enter product name">
+  </div>
+  
+  <div class="filter-row">
+    <div class="form-group">
+      <label for="unitOperator">Unit Cost > / <</label>
+      <select id="unitOperator" [(ngModel)]="unitCostOperator">
+        <option value=">">Greater than</option>
+        <option value="<">Less than</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="unitValue">Unit Cost</label>
+      <input id="unitValue" class="form-input" type="number" [(ngModel)]="unitCostValue" (input)="applyAdvancedFilter()">
+    </div>
+  
+    <div class="form-group">
+      <label for="salesOperator">Total Sales > / <</label>
+      <select id="salesOperator" [(ngModel)]="totalSalesOperator">
+        <option value=">">Greater than</option>
+        <option value="<">Less than</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="salesValue">Total Sales</label>
+      <input id="salesValue" class="form-input" type="number" [(ngModel)]="totalSalesValue" (input)="applyAdvancedFilter()">
+    </div>
+  </div>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="unit">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Unit </th>
+        <td mat-cell *matCellDef="let element"> {{element.unit}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="orders">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Orders </th>
+        <td mat-cell *matCellDef="let element"> {{element.orders}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="totalSales">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Sales </th>
+        <td mat-cell *matCellDef="let element"> {{element.totalSales}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="inventory">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Inventory </th>
+        <td mat-cell *matCellDef="let element"> {{element.inventory}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  

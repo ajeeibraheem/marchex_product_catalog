@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="create-form">
+    <div class="form-group">
+      <label class="form-label">Product Name</label>
+      <input class="form-input" type="text" formControlName="name" required>
+      <div class="error" *ngIf="form.get('name')?.hasError('required')">Name is required</div>
+    </div>
+  
+    <div class="form-group">
+      <label class="form-label">Unit Cost</label>
+      <input class="form-input" type="number" formControlName="unit">
+      <div class="error" *ngIf="form.get('unit')?.hasError('min')">Must be greater than 0</div>
+    </div>
+  
+    <div class="form-group">
+      <label class="form-label">Orders</label>
+      <input class="form-input" type="number" formControlName="orders">
+    </div>
+  
+    <div class="form-group">
+      <label class="form-label">Total Sales</label>
+      <input class="form-input" type="number" formControlName="totalSales">
+    </div>
+  
+    <div class="form-group">
+      <label class="form-label">Inventory</label>
+      <input class="form-input" type="number" formControlName="inventory">
+    </div>
+  
+    <div class="form-group">
+      <label class="form-label">Image URL</label>
+      <input class="form-input" type="text" formControlName="imageURL">
+    </div>
+  
+    <button class="btn-primary" type="submit">Create Product</button>
+  </form>
+  
