@@ -12,14 +12,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ### Frontend
 ```bash
-cd frontend
+cd application
 npm install
 ng serve
 ```
 
 ### Backend
 ```bash
-cd frontend
+cd application
 npm install json-server
 json-server -w src/app/database/db.json
 
