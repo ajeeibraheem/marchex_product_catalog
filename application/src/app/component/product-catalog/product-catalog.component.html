@@ -1,13 +1,10 @@
-<h1>Product Catalog</h1>
-<div>
-    <a class="btn-accent" routerLink="/create">Add New Product</a>
-  </div>
-  
-  <div class="form-group">
+<main>
+    <h1 class="page-title">Product Catalogue</h1>
+</main>
+<div class="form-group">
     <label for="search">Search by Name</label>
     <input id="search" class="form-input" (keyup)="applyNameFilter($event)" placeholder="Enter product name">
   </div>
-  
   <div class="filter-row">
     <div class="form-group">
       <label for="unitOperator">Unit Cost > / <</label>
@@ -19,7 +16,7 @@
   
     <div class="form-group">
       <label for="unitValue">Unit Cost</label>
-      <input id="unitValue" class="form-input" type="number" [(ngModel)]="unitCostValue" (input)="applyAdvancedFilter()">
+      <input id="unitValue" class="form-input" type="number" [(ngModel)]="unitCostValue" (input)="applyAdvancedFilter()" appPositiveIntegerOnly>
     </div>
   
     <div class="form-group">
@@ -32,7 +29,7 @@
   
     <div class="form-group">
       <label for="salesValue">Total Sales</label>
-      <input id="salesValue" class="form-input" type="number" [(ngModel)]="totalSalesValue" (input)="applyAdvancedFilter()">
+      <input id="salesValue" class="form-input" type="number" [(ngModel)]="totalSalesValue" (input)="applyAdvancedFilter()" appPositiveIntegerOnly>
     </div>
   </div>
   
@@ -69,4 +66,3 @@
   
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   </div>
-  

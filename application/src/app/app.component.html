@@ -1,0 +1,13 @@
+<header class="app-header">
+  <div class="header-container">
+    <img src="assets/icon.png" alt="App Logo" class="app-logo" onerror="this.src='assets/catalog.png'">
+    <nav class="nav-links">
+      <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+      <a routerLink="/create" routerLinkActive="active" ariaCurrentWhenActive="page">Add New Product</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

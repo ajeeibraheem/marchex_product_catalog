@@ -1,0 +1,171 @@
+{
+  "product": [
+    {
+      "name": "Milk",
+      "description": "milk",
+      "unit": 20,
+      "orders": 150,
+      "totalSales": 3000,
+      "inventory": 318,
+      "imageURL": "https://i.pinimg.com/736x/b7/29/09/b729093953c2a65f61ed3d6dc9b47590.jpg"
+    },
+    {
+      "name": "Eggs",
+      "description": "eggs",
+      "unit": 8,
+      "orders": 74,
+      "totalSales": 592,
+      "inventory": 200,
+      "imageURL": "https://i.pinimg.com/736x/b7/95/64/b79564117c8e497be4c0af6e0dab2601.jpg"
+    },
+    {
+      "name": "Bread",
+      "description": "bread",
+      "unit": 15,
+      "orders": 120,
+      "totalSales": 1800,
+      "inventory": 145,
+      "imageURL": "https://i.pinimg.com/736x/b7/d1/6d/b7d16d1d7994c9cc1536801693324af1.jpg"
+    },
+    {
+      "name": "Butter",
+      "description": "butter",
+      "unit": 25,
+      "orders": 90,
+      "totalSales": 2250,
+      "inventory": 80,
+      "imageURL": "https://i.pinimg.com/736x/2e/3f/7c/2e3f7cba7f5d91a4fff8a19cb2d3c851.jpg"
+    },
+    {
+      "name": "Cheese",
+      "description": "cheese",
+      "unit": 30,
+      "orders": 60,
+      "totalSales": 1800,
+      "inventory": 50,
+      "imageURL": "https://i.pinimg.com/736x/07/25/5a/07255ac9c59c7f9e52041195c0ab55cf.jpg"
+    },
+    {
+      "name": "Peanut Butter",
+      "unit": 46,
+      "orders": 211,
+      "totalSales": 9706,
+      "inventory": 338,
+      "imageURL": "https://picsum.photos/seed/peanut-butter-2/200/200"
+    },
+    {
+      "name": "Ice Cream",
+      "unit": 40,
+      "orders": 68,
+      "totalSales": 2720,
+      "inventory": 355,
+      "imageURL": "https://picsum.photos/seed/ice-cream-3/200/200"
+    },
+    {
+      "name": "Jam",
+      "unit": 40,
+      "orders": 136,
+      "totalSales": 5440,
+      "inventory": 9,
+      "imageURL": "https://picsum.photos/seed/jam-4/200/200"
+    },
+    {
+      "name": "Salt",
+      "unit": 18,
+      "orders": 96,
+      "totalSales": 1728,
+      "inventory": 25,
+      "imageURL": "https://picsum.photos/seed/salt-5/200/200"
+    },
+    {
+      "name": "Chicken",
+      "unit": 45,
+      "orders": 84,
+      "totalSales": 3780,
+      "inventory": 186,
+      "imageURL": "https://picsum.photos/seed/chicken-6/200/200"
+    },
+    {
+      "name": "Cucumber",
+      "unit": 19,
+      "orders": 92,
+      "totalSales": 1748,
+      "inventory": 185,
+      "imageURL": "https://picsum.photos/seed/cucumber-7/200/200"
+    },
+    {
+      "name": "Yogurt",
+      "unit": 29,
+      "orders": 206,
+      "totalSales": 5974,
+      "inventory": 441,
+      "imageURL": "https://picsum.photos/seed/yogurt-8/200/200"
+    },
+    {
+      "name": "Spinach",
+      "unit": 17,
+      "orders": 111,
+      "totalSales": 1887,
+      "inventory": 314,
+      "imageURL": "https://picsum.photos/seed/spinach-30/200/200"
+    },
+    {
+      "name": "Tomatoes",
+      "unit": 24,
+      "orders": 290,
+      "totalSales": 6960,
+      "inventory": 382,
+      "imageURL": "https://picsum.photos/seed/tomatoes-31/200/200"
+    },
+    {
+      "name": "Mushrooms",
+      "unit": 46,
+      "orders": 79,
+      "totalSales": 3634,
+      "inventory": 26,
+      "imageURL": "https://picsum.photos/seed/mushrooms-45/200/200"
+    },
+    {
+      "name": "Carrots",
+      "unit": 24,
+      "orders": 241,
+      "totalSales": 5784,
+      "inventory": 34,
+      "imageURL": "https://picsum.photos/seed/carrots-46/200/200"
+    },
+    {
+      "name": "Rice",
+      "unit": 28,
+      "orders": 104,
+      "totalSales": 2912,
+      "inventory": 2,
+      "imageURL": "https://picsum.photos/seed/rice-72/200/200"
+    },
+    {
+      "name": "Beef",
+      "unit": 15,
+      "orders": 182,
+      "totalSales": 2730,
+      "inventory": 362,
+      "imageURL": "https://picsum.photos/seed/beef-73/200/200"
+    },
+    {
+      "id": "e07d",
+      "name": "Test",
+      "unit": 10,
+      "orders": 100,
+      "totalSales": 1000,
+      "inventory": 500,
+      "imageURL": "https://i.pinimg.com/736x/b7/29/09/b729093953c2a65f61ed3d6dc9b47590.jpg"
+    },
+    {
+      "id": "f9c0",
+      "name": "test 2",
+      "unit": 10,
+      "orders": 0,
+      "totalSales": 0,
+      "inventory": 0,
+      "imageURL": ""
+    }
+  ]
+}

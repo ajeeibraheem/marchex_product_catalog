@@ -1,0 +1,52 @@
+<main>
+  <h1 class="page-title">Create Product</h1>
+</main>
+<form [formGroup]="form" (ngSubmit)="submit()" class="create-form" novalidate>
+  <div class="form-group">
+    <label class="form-label">Product Name</label>
+    <input class="form-input" type="text" formControlName="name">
+    <div class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+      Name is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Unit Cost</label>
+    <input class="form-input" type="number" formControlName="unit" appPositiveIntegerOnly>
+    <div class="error" *ngIf="form.get('unit')?.touched && form.get('unit')?.invalid">
+      <span *ngIf="form.get('unit')?.errors?.['required']">Unit cost is required</span>
+      <span *ngIf="form.get('unit')?.errors?.['min']">Unit cost must be greater than 0</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Orders</label>
+    <input class="form-input" type="number" formControlName="orders" appPositiveIntegerOnly>
+    <div class="error" *ngIf="form.get('orders')?.touched && form.get('orders')?.invalid">
+      Orders is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Total Sales</label>
+    <input class="form-input" type="number" formControlName="totalSales" appPositiveIntegerOnly>
+    <div class="error" *ngIf="form.get('totalSales')?.touched && form.get('totalSales')?.invalid">
+      Total sales is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Inventory</label>
+    <input class="form-input" type="number" formControlName="inventory" appPositiveIntegerOnly>
+    <div class="error" *ngIf="form.get('inventory')?.touched && form.get('inventory')?.invalid">
+      Inventory is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Image URL</label>
+    <input class="form-input" type="text" formControlName="imageURL">
+  </div>
+
+  <button class="btn-primary" type="submit">Create Product</button>
+</form>
