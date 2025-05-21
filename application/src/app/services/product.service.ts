@@ -8,15 +8,27 @@ import { Product } from '../model/Product';
 })
 export class ProductService {
 
-  private baseUrl = 'http://localhost:3000/product';
+  private apiUrl = 'http://localhost:3000/product';
 
   constructor(private http: HttpClient) {}
 
-  GetAll(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl);
+  // Fetch a single product by ID
+  GetById(id: string): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 
+  // Update a product by ID
+  Update(id: string, product: Product): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, product);
+  }
+
+  // Get all products
+  GetAll(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl);
+  }
+
+  // Create a new product
   createProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseUrl, product);
+    return this.http.post<Product>(this.apiUrl, product);
   }
 } 
