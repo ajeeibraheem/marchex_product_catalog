@@ -1,0 +1,10 @@
+<main class="chart-page">
+    <h2>Sales Comparison Chart</h2>
+    <a routerLink="/home" class="btn-primary">← Back to Catalog</a>
+  
+    <app-product-chart
+    *ngIf="focusedProduct"
+    [products]="products"
+    [focusedProduct]="focusedProduct">
+  </app-product-chart>
+  </main>

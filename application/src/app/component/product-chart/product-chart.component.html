@@ -1,0 +1,13 @@
+<div class="product-info" *ngIf="focusedProduct">
+    <img [src]="focusedProduct.imageURL" alt="{{ focusedProduct.name }}" class="product-image" />
+    <div class="product-details">
+      <h3>{{ focusedProduct.name }}</h3>
+      <p><strong>Unit Cost:</strong> {{ focusedProduct.unit }}</p>
+      <p><strong>Orders:</strong> {{ focusedProduct.orders }}</p>
+      <p><strong>Total Sales:</strong> {{ focusedProduct.totalSales }}</p>
+      <p><strong>Inventory:</strong> {{ focusedProduct.inventory }}</p>
+    </div>
+  </div>
+  
+  <div #chartContainer style="width: 100%; height: 400px;"></div>
+  

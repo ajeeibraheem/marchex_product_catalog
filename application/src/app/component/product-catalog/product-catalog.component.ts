@@ -27,6 +27,9 @@ import { Product } from '../../model/Product';
 // Custom directive to restrict numeric input to positive integers
 import { PositiveIntegerOnlyDirective } from '../../positive-integer-only.directive';
 
+import { ProductChartComponent } from '../product-chart/product-chart.component';
+
+
 @Component({
   selector: 'app-product-catalog',
   standalone: true,
@@ -35,7 +38,7 @@ import { PositiveIntegerOnlyDirective } from '../../positive-integer-only.direct
     CommonModule, FormsModule, ReactiveFormsModule,
     MatTableModule, MatPaginatorModule, MatSort, MatSortModule,
     MatFormFieldModule, MatInputModule,
-    PositiveIntegerOnlyDirective
+    PositiveIntegerOnlyDirective, ProductChartComponent
   ],
   templateUrl: './product-catalog.component.html',
   styleUrl: './product-catalog.component.less'
@@ -52,7 +55,7 @@ export class ProductCatalogComponent implements OnInit, AfterViewInit {
   dataSource!: MatTableDataSource<Product>;
 
   // Columns displayed in the table
-  displayedColumns: string[] = ['name', 'unit', 'orders', 'totalSales', 'inventory'];
+  displayedColumns: string[] = ['name', 'unit', 'orders', 'totalSales', 'inventory', 'actions'];
 
   // Angular Material ViewChild references for sorting and pagination
   @ViewChild(MatSort) sort!: MatSort;
@@ -64,6 +67,8 @@ export class ProductCatalogComponent implements OnInit, AfterViewInit {
 
   totalSalesOperator: '>' | '<' = '>';
   totalSalesValue: number = 0;
+
+  focusedProduct: Product | null = null;
 
   constructor(private services: ProductService) {}
 
@@ -132,4 +137,13 @@ export class ProductCatalogComponent implements OnInit, AfterViewInit {
       this._liveAnnouncer.announce('Sorting cleared');
     }
   }
+
+  /**
+ * Sets the focused product based on user click.
+ * Triggers the sales comparison chart component to refresh with new focus.
+ * @param product The product object that was clicked
+ */
+focusProduct(product: Product): void {
+  this.focusedProduct = product;
+}
 }
